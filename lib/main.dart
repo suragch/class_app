@@ -19,10 +19,11 @@ class MyApp extends StatelessWidget {
           children: [
             TitleRow(),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                ButtonColumn(),
-                ButtonColumn(),
-                ButtonColumn(),
+                ButtonColumn1(),
+                ButtonColumn2(),
+                ButtonColumn3(),
               ],
             ),
           ],
@@ -32,8 +33,8 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class ButtonColumn extends StatelessWidget {
-  const ButtonColumn({
+class ButtonColumn1 extends StatelessWidget {
+  const ButtonColumn1({
     Key? key,
   }) : super(key: key);
 
@@ -48,6 +49,62 @@ class ButtonColumn extends StatelessWidget {
           margin: const EdgeInsets.only(top: 8),
           child: Text(
             'CALL',
+            style: TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.w400,
+              color: Colors.blue,
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class ButtonColumn2 extends StatelessWidget {
+  const ButtonColumn2({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Icon(Icons.near_me, color: Colors.blue),
+        Container(
+          margin: const EdgeInsets.only(top: 8),
+          child: Text(
+            'ROUTE',
+            style: TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.w400,
+              color: Colors.blue,
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class ButtonColumn3 extends StatelessWidget {
+  const ButtonColumn3({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Icon(Icons.share, color: Colors.blue),
+        Container(
+          margin: const EdgeInsets.only(top: 8),
+          child: Text(
+            'Share',
             style: TextStyle(
               fontSize: 12,
               fontWeight: FontWeight.w400,
