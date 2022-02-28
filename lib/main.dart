@@ -21,9 +21,9 @@ class MyApp extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                ButtonColumn1(),
-                ButtonColumn2(),
-                ButtonColumn3(),
+                ButtonColumn(label: 'CALL', icon: Icons.call),
+                ButtonColumn(label: 'ROUTE', icon: Icons.near_me),
+                ButtonColumn(label: 'SHARE', icon: Icons.share),
               ],
             ),
           ],
@@ -33,10 +33,15 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class ButtonColumn1 extends StatelessWidget {
-  const ButtonColumn1({
+class ButtonColumn extends StatelessWidget {
+  const ButtonColumn({
     Key? key,
+    required this.label,
+    required this.icon,
   }) : super(key: key);
+
+  final String label;
+  final IconData icon;
 
   @override
   Widget build(BuildContext context) {
@@ -44,67 +49,11 @@ class ButtonColumn1 extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Icon(Icons.call, color: Colors.blue),
+        Icon(icon, color: Colors.blue),
         Container(
           margin: const EdgeInsets.only(top: 8),
           child: Text(
-            'CALL',
-            style: TextStyle(
-              fontSize: 12,
-              fontWeight: FontWeight.w400,
-              color: Colors.blue,
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-class ButtonColumn2 extends StatelessWidget {
-  const ButtonColumn2({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Icon(Icons.near_me, color: Colors.blue),
-        Container(
-          margin: const EdgeInsets.only(top: 8),
-          child: Text(
-            'ROUTE',
-            style: TextStyle(
-              fontSize: 12,
-              fontWeight: FontWeight.w400,
-              color: Colors.blue,
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-class ButtonColumn3 extends StatelessWidget {
-  const ButtonColumn3({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Icon(Icons.share, color: Colors.blue),
-        Container(
-          margin: const EdgeInsets.only(top: 8),
-          child: Text(
-            'Share',
+            label,
             style: TextStyle(
               fontSize: 12,
               fontWeight: FontWeight.w400,
