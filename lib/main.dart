@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -9,32 +9,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter layout demo',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Flutter layout demo'),
-        ),
-        body: ListView(
-          children: const [
-            ListTile(
-              title: Text('Ul hodlox'),
-              subtitle: Text('15,373 zar'),
-              leading: Icon(Icons.home),
-            ),
-            ListTile(
-              title: Text('Ul hodlox'),
-              subtitle: Text('15,373 zar'),
-              leading: Icon(Icons.home),
-            ),
-            ListTile(
-              title: Text('Ul hodlox'),
-              subtitle: Text('15,373 zar'),
-              leading: Icon(Icons.home),
-            ),
-          ],
-        ),
-      ),
+    return Container(
+      color: Colors.red,
     );
   }
 }
