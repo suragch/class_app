@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  final myList = ["hamburger", "khuushuur", "buuz"];
-  print(myList[1]);
-
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -13,114 +10,104 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(primarySwatch: Colors.teal),
-      home: HomePage(),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  HomePage({Key? key}) : super(key: key);
-
-  final europeanCountries = [
-    'Albania',
-    'Andorra',
-    'Armenia',
-    'Austria',
-    'Azerbaijan',
-    'Belarus',
-    'Belgium',
-    'Bosnia and Herzegovina',
-    'Bulgaria',
-    'Croatia',
-    'Cyprus',
-    'Czech Republic',
-    'Denmark',
-    'Estonia',
-    'Finland',
-    'France',
-    'Georgia',
-    'Germany',
-    'Greece',
-    'Hungary',
-    'Iceland',
-    'Ireland',
-    'Italy',
-    'Kazakhstan',
-    'Kosovo',
-    'Latvia',
-    'Liechtenstein',
-    'Lithuania',
-    'Luxembourg',
-    'Macedonia',
-    'Malta',
-    'Moldova',
-    'Monaco',
-    'Montenegro',
-    'Netherlands',
-    'Norway',
-    'Poland',
-    'Portugal',
-    'Romania',
-    'Russia',
-    'San Marino',
-    'Serbia',
-    'Slovakia',
-    'Slovenia',
-    'Spain',
-    'Sweden',
-    'Switzerland',
-    'Turkey',
-    'Ukraine',
-    'United Kingdom',
-    'Vatican City'
-  ];
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("My List"),
-      ),
-      body: ListView(
-        children: [
-          Card(
-            elevation: 20,
-            child: ListTile(
-              leading: Icon(Icons.wb_sunny),
-              title: Text('Sun'),
-              subtitle: Text('Hot and yellow'),
-              trailing: Icon(Icons.keyboard_arrow_right),
-              onTap: () {
-                print('Sun');
-              },
+      title: 'Flutter layout demo',
+      theme: ThemeData(primarySwatch: Colors.red),
+      home: Scaffold(
+        appBar: AppBar(),
+        body: ListView(
+          children: const [
+            Card(
+              child: ListTile(
+                title: Text(
+                  'Бүх төрөлүүд',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                subtitle: Text('96,537 зар'),
+                leading: Icon(Icons.apps_rounded),
+              ),
             ),
-          ),
-          Card(
-            elevation: 20,
-            child: ListTile(
-              leading: Icon(Icons.brightness_3),
-              title: Text('Moon'),
-              subtitle: Text('Cold and white'),
-              trailing: Icon(Icons.keyboard_arrow_right),
-              onTap: () {
-                print('Moon');
-              },
+            Card(
+              child: ListTile(
+                title: Text(
+                  'Хувцас хэрэглэл',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                subtitle: Text('9,310 зар'),
+                leading: Icon(Icons.checkroom),
+              ),
             ),
-          ),
-          Card(
-            elevation: 20,
-            child: ListTile(
-              leading: Icon(Icons.star),
-              title: Text('Stars'),
-              subtitle: Text('Beatiful at night'),
-              trailing: Icon(Icons.keyboard_arrow_right),
-              onTap: () {
-                print('Stars');
-              },
+            Card(
+              child: ListTile(
+                title: Text(
+                  'Үл хөдлөх',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                subtitle: Text('15,373 зар'),
+                leading: Icon(Icons.home),
+              ),
             ),
-          ),
-        ],
+            Card(
+              child: ListTile(
+                title: Text(
+                  'Автомашин',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                subtitle: Text('14,114 зар'),
+                leading: Icon(Icons.airport_shuttle),
+              ),
+            ),
+            Card(
+              child: ListTile(
+                title: Text(
+                  'Ажлын зар',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                subtitle: Text('6,879 зар'),
+                leading: Icon(Icons.work),
+              ),
+            ),
+            Card(
+              child: ListTile(
+                title: Text(
+                  'Хүүхдийн бараа',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                subtitle: Text('2,427 зар'),
+                leading: Icon(Icons.home),
+              ),
+            ),
+            Card(
+              child: ListTile(
+                title: Text(
+                  'Компьютер сэлбэг хэрэгсэл',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                subtitle: Text('9,037 зар'),
+                leading: Icon(Icons.laptop),
+              ),
+            ),
+            Card(
+              child: ListTile(
+                title: Text(
+                  'Утас, дугаар',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                subtitle: Text('7,834 зар'),
+                leading: Icon(Icons.phone_android),
+              ),
+            ),
+            Card(
+              child: ListTile(
+                title: Text(
+                  'Цахилгаан бараа',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                subtitle: Text('3,562 зар'),
+                leading: Icon(Icons.radio),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
