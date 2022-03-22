@@ -2,11 +2,11 @@ import 'package:class_app/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(MusicApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class MusicApp extends StatelessWidget {
+  const MusicApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
