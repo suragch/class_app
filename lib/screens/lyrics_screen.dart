@@ -1,6 +1,7 @@
 import 'package:class_app/data/lyrics.dart';
 import 'package:class_app/data/songs.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class LyricsScreen extends StatelessWidget {
   const LyricsScreen({
@@ -34,6 +35,17 @@ class Lyrics extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(lyrics);
+    return SingleChildScrollView(
+      child: Container(
+        width: double.infinity,
+        padding: const EdgeInsets.all(20.0),
+        child: Text(
+          lyrics,
+          style: GoogleFonts.dancingScript(
+            textStyle: TextStyle(fontSize: 20),
+          ),
+        ),
+      ),
+    );
   }
 }
