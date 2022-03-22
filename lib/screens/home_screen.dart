@@ -35,6 +35,7 @@ class SongList extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) => LyricsScreen(
+                    id: index,
                     songTitle: songTitles[index],
                   ),
                 ),
